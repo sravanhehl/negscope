@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sravanhehl-negscope"
+version = "0.1.0"
+description = "识别否定词作用域，判断是硬禁止、软建议还是不必要求，给出可执行性判定"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "sravanhehl" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://sravanhehl.github.io"
+Repository = "https://github.com/sravanhehl/negscope"
+Issues = "https://github.com/sravanhehl/negscope/issues"
+
+[project.scripts]
+negscope = "negscope:main"
+
+[tool.setuptools]
+py-modules = ["negscope"]
